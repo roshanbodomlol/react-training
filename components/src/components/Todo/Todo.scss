@@ -1,0 +1,11 @@
+.todo {
+  padding: 90px 0;
+}
+
+.todo-item {
+  padding: 9px 0;
+
+  &.red {
+    color: red;
+  }
+}
