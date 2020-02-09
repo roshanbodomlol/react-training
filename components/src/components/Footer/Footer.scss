@@ -1,0 +1,10 @@
+@import "../../styles/vars";
+
+#footer-wrapper {
+  background: $darkGrey;
+  color: $white;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
