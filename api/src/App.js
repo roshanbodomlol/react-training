@@ -7,7 +7,7 @@ import Posts from './components/Posts';
 import Joke from './components/Joke';
 import './styles/global.scss';
 
-function App() {
+const App = () => {
   return (
     <div id="wrapper">
       <Header/>
@@ -18,6 +18,6 @@ function App() {
       </Switch>
     </div>
   );
-}
+};
 
 export default App;
