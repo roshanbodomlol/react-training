@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+#content-wrapper {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joke-wrap {
+  width: 300px;
+}
+
+.post-list {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .card-list {
+
+    .card {
+      margin-bottom: 9px;
+    }
+  }
+}
