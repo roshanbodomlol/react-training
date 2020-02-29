@@ -38,6 +38,7 @@
         "consistent-return": "off",
         "comma-dangle": ["error", "never"],
         "import/no-named-as-default": "off",
-        "import/no-named-as-default-member": "off"
+        "import/no-named-as-default-member": "off",
+        "linebreak-style": ["error", "windows"]
     }
 }
