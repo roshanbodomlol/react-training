@@ -7,3 +7,10 @@
   padding: 0 30px;
   margin: auto;
 }
+
+.screen {
+
+  &.__fullHeight {
+    min-height: calc(100vh - 69px);
+  }
+}
