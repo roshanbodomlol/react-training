@@ -15,6 +15,9 @@ const Header = () => (
       <li>
         <Link to="/joke">Joke of the Day</Link>
       </li>
+      <li>
+        <Link to="/movies">Movies</Link>
+      </li>
     </ul>
   </div>
 );
