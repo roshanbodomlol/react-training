@@ -1,0 +1,35 @@
+@import "../../styles/vars";
+
+#header-wrapper {
+  background-color: $purple;
+  padding: 12px 0;
+
+  #logo {
+
+    img {
+      max-width: 45px;
+    }
+  }
+
+  #menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+    li {
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      a {
+        color: $white;
+        font-family: $fontHeading;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+    }
+  }
+}
