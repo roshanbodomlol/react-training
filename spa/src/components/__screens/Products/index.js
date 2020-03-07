@@ -19,6 +19,13 @@ const Products = () => {
     <div id="products" className="screen __fullHeight">
       <div className="cat-bar">
         {catList}
+        <span
+          role="button"
+          onClick={() => console.log(cat.id)}
+          tabIndex="-1"
+        >
+          All
+        </span>
       </div>
       <div className="product-list"/>
     </div>
