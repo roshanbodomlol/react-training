@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Products extends Component {
-  state = {};
+import './Products.scss';
 
-  render() {
-    return (
-      <div id="products" className="screen __fullHeight"/>
-    );
-  }
-}
+const Products = () => (
+  <div id="products" className="screen __fullHeight"/>
+);
 
 export default Products;

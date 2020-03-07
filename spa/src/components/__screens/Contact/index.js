@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Contact extends Component {
-  state = {};
+import './Contact.scss';
 
-  render() {
-    return (
-      <div id="contact" className="screen __fullHeight"/>
-    );
-  }
-}
+const Contact = () => (
+  <div id="contact" className="screen __fullHeight"/>
+);
 
 export default Contact;

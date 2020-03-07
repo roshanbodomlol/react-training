@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class WhoWeAre extends Component {
-  state = {};
+import './WhoWeAre.scss';
 
-  render() {
-    return (
-      <div id="who-we-are" className="screen __fullHeight"/>
-    );
-  }
-}
+const WhoWeAre = () => (
+  <div id="who-we-are" className="screen __fullHeight"/>
+);
 
 export default WhoWeAre;
