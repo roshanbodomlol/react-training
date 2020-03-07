@@ -1,15 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
+import withWhatsNew from './withWhatsNew';
 import './WhatsNew.scss';
 
-class WhatsNew extends Component {
-  state = {};
+const WhatsNew = () => (
+  <div id="whats-new" className="screen __fullHeight"/>
+);
 
-  render() {
-    return (
-      <div id="whats-new" className="screen __fullHeight"/>
-    );
-  }
-}
-
-export default WhatsNew;
+export default withWhatsNew(WhatsNew);
