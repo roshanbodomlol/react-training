@@ -1,6 +1,26 @@
 @import "../../../styles/vars";
 
 #whats-new {
+  padding: 0;
   padding-top: calc(69px);
   background-color: $yellow;
+
+  .slide {
+    height: 600px;
+    position: relative;
+
+    .slide-image {
+      height: 100%;
+    }
+
+    .slide-title {
+      position: absolute;
+      bottom: 0;
+      background: transparentize($red, 0.15);
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+      color: $white;
+    }
+  }
 }

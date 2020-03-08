@@ -41,6 +41,8 @@
       "import/no-named-as-default": "off",
       "import/no-named-as-default-member": "off",
       "linebreak-style": "off",
-      "react/state-in-constructor": ["error", "never"]
+      "react/state-in-constructor": ["error", "never"],
+      "react/jsx-props-no-spreading": "off",
+      "react/no-array-index-key": "off"
   }
 }
