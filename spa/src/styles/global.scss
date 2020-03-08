@@ -15,3 +15,14 @@
     min-height: calc(100vh - 69px);
   }
 }
+
+// global transitions
+.global-fade {
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+.global-fade-enter, .global-fade-exit {
+  opacity: 0;
+  transition: all .3s ease;
+}
