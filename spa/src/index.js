@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
 import App from './App';
+import store from './redux';
 import * as serviceWorker from './serviceWorker';
 import 'antd/dist/antd.css';
 import 'slick-carousel/slick/slick.css';
@@ -9,7 +11,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import './styles/global.scss';
 
 ReactDOM.render(
-  <App/>,
+  <Provider store={store}>
+    <App/>
+  </Provider>,
   document.getElementById('root')
 );
 

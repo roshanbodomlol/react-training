@@ -5,14 +5,17 @@ import {
   objectOf,
   any,
   func,
-  number
+  number,
+  oneOfType,
+  string
 } from 'prop-types';
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 import classnames from 'classnames';
 
 import Loading from '../../Loading';
 import withProducts from './withProducts';
 import { WP } from '../../../constants';
+import Product from './Product';
 import './Products.scss';
 
 const Products = ({
@@ -36,16 +39,12 @@ const Products = ({
   });
 
   const productList = products.map((product) => (
-    <Col span={6} key={`product-${product.id}`}>
-      <div className="product">
-        <div className="product-image">
-          <img src={product.img} alt=""/>
-        </div>
-        <div className="product-name">{product.name}</div>
-        <div className="product-price">Rs. {product.price}</div>
-      </div>
-    </Col>
+    <Product key={`product-${product.id}`} product={product}/>
   ));
+
+  const classes = classnames('category-span', {
+    active: activeCategory === 'all'
+  });
 
   return (
     <div id="products" className="screen __fullHeight">
@@ -53,8 +52,9 @@ const Products = ({
         {catList}
         <span
           role="button"
-          onClick={() => console.log()}
+          onClick={() => setCategory('all')}
           tabIndex="-1"
+          className={classes}
         >
           All
         </span>
@@ -64,7 +64,7 @@ const Products = ({
           loading
             ? <Loading/>
             : (
-              <Row type="flex">
+              <Row type="flex" gutter={18}>
                 {productList}
               </Row>
             )
@@ -78,7 +78,7 @@ Products.propTypes = {
   products: arrayOf(objectOf(any)).isRequired,
   loading: bool.isRequired,
   setCategory: func.isRequired,
-  activeCategory: number.isRequired
+  activeCategory: oneOfType([string, number]).isRequired
 };
 
 export default withProducts(Products);

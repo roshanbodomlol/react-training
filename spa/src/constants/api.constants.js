@@ -5,8 +5,9 @@ export default {
   API_WOO_URL: 'http://demos.wearemanda.com/estore/wp-json/wc/v2',
   ENDPOINTS: {
     POSTS_ALL: '/posts',
-    PRODUCTS_ALL: '/products',
-    PRODUCTS_BY_CATID: '/products?category=:id',
-    PAGE_BY_ID: '/pages/:id'
+    PRODUCTS_ALL: '/products?per_page=100',
+    PRODUCTS_BY_CATID: '/products?category=:id?per_page=100',
+    PAGE_BY_ID: '/pages/:id',
+    PRODUCT_BY_ID: '/products/:id'
   }
 };

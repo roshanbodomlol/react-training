@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Badge, Tooltip } from 'antd';
 import { debounce } from 'lodash';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { ShoppingCartOutlined } from '@ant-design/icons';
 
 import { GLOBALS } from '../../../constants';
 import logo from '../../../static/icons/logo.svg';
@@ -60,12 +61,25 @@ class Header extends Component {
               </div>
             </Col>
             <Col span={20}>
-              <ul id="menu">
-                <li><a href="/" onClick={(e) => this.handleMenuClick(e, 'whats-new')}>What&rsquo;s New</a></li>
-                <li><a href="/" onClick={(e) => this.handleMenuClick(e, 'who-we-are')}>Who we are</a></li>
-                <li><a href="/" onClick={(e) => this.handleMenuClick(e, 'products')}>Products</a></li>
-                <li><a href="/" onClick={(e) => this.handleMenuClick(e, 'contact')}>Contact</a></li>
-              </ul>
+              <div className="header-right">
+                <ul id="menu">
+                  <li><a href="/" onClick={(e) => this.handleMenuClick(e, 'whats-new')}>What&rsquo;s New</a></li>
+                  <li><a href="/" onClick={(e) => this.handleMenuClick(e, 'who-we-are')}>Who we are</a></li>
+                  <li><a href="/" onClick={(e) => this.handleMenuClick(e, 'products')}>Products</a></li>
+                  <li><a href="/" onClick={(e) => this.handleMenuClick(e, 'contact')}>Contact</a></li>
+                </ul>
+                <div className="cart">
+                  <Tooltip
+                    title="You have 1 items in your cart"
+                    placement="bottom"
+                    overlayClassName="cart-tooltip"
+                  >
+                    <Badge count={1}>
+                      <ShoppingCartOutlined/>
+                    </Badge>
+                  </Tooltip>
+                </div>
+              </div>
             </Col>
           </Row>
         </div>

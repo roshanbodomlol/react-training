@@ -27,7 +27,13 @@ const withProducts = (ProductsComponent) => {
 
     getProducts = () => {
       const { activeCategory } = this.state;
-      getWoo(generatePath(API.ENDPOINTS.PRODUCTS_BY_CATID, { id: activeCategory }))
+      let apiEndpoint = generatePath(API.ENDPOINTS.PRODUCTS_BY_CATID, { id: activeCategory });
+
+      if (activeCategory === 'all') {
+        apiEndpoint = API.ENDPOINTS.PRODUCTS_ALL;
+      }
+
+      getWoo(apiEndpoint)
         .then((response) => {
           const products = response.map((product) => ({
             name: product.name,
