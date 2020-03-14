@@ -15,15 +15,16 @@ export default (state = initState, action) => {
   switch (action.type) {
     case SHOW_PRODUCT_MODAL:
       return {
-        modalVisible: true,
-        ...initState
+        ...initState,
+        modalVisible: true
       };
     case HIDE_PRODUCT_MODAL:
       return initState;
     case SHOW_PRODUCT_MODAL_CONTENT:
       return {
+        ...action.payload,
         productContentLoading: false,
-        ...action.payload
+        modalVisible: true
       };
     default:
       return state;
