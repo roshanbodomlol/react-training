@@ -12,10 +12,11 @@ export const hideProductModal = () => ({
   type: HIDE_PRODUCT_MODAL
 });
 
-export const showProductModalContent = (productModalImage, productModalContent) => ({
+export const showProductModalContent = (productModalImage, productModalContent, productId) => ({
   type: SHOW_PRODUCT_MODAL_CONTENT,
   payload: {
     productModalImage,
-    productModalContent
+    productModalContent,
+    productId
   }
 });
